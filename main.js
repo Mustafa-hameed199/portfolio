@@ -1,11 +1,12 @@
 let log = console.log;
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Preloader 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
-// const preLoader = document.querySelector(".preloader");
+const preLoader = document.querySelector(".preloader");
 
 window.addEventListener("load", () => {
-    // preLoader.style.opacity = "0";
-    // setTimeout(() => preLoader.style.display = "none" , 200)
+    preLoader.style.opacity = "0";
+    preLoader.style.transform = "translateX(100vw)";
+    setTimeout(() => preLoader.style.display = "none" , 200)
 })
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Intro 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳

@@ -96,6 +96,23 @@ h4 {
 }
 
 /* ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾  Preloader  ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾*/
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #161519;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+@media (min-width: 768px) {
+  .preloader img {
+    width: 60%;
+  }
+}
+
 /* ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾  Intro  ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾*/
 .load-content {
   display: none;
