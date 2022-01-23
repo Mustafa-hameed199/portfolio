@@ -1,6 +1,13 @@
 let log = console.log;
 
+// 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Preloader 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
+const preLoader = document.querySelector(".preloader");
+
+window.addEventListener("load", () => preLoader.style.display = "none")
+
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Intro 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
+window.addEventListener("DOMContentLoaded", () => {
+
 let durationLoader = 3;
 let timingFunctionLoader = "cubic-bezier(.74, .06, .4, .92)";
 
@@ -240,4 +247,6 @@ function showElements(entries) {
     })
 }
 elements.forEach(el => observer.observe(el) )
+
+})
 
