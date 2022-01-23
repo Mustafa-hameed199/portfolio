@@ -104,6 +104,8 @@ h4 {
   display: grid;
   place-items: center;
   background: #161519;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 @media (min-width: 768px) {
   .preloader img {

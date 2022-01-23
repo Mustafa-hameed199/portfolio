@@ -3,7 +3,10 @@ let log = console.log;
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Preloader 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
 const preLoader = document.querySelector(".preloader");
 
-window.addEventListener("load", () => preLoader.style.display = "none")
+window.addEventListener("load", () => {
+    preLoader.style.opacity = "0";
+    setTimeout(() => preLoader.style.display = "none" , 350)
+})
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Intro 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
 window.addEventListener("DOMContentLoaded", () => {
