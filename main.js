@@ -6,11 +6,10 @@ const preLoader = document.querySelector(".preloader");
 window.addEventListener("load", () => {
     preLoader.style.opacity = "0";
     preLoader.style.transform = "scale(0)";
-    setTimeout(() => preLoader.style.display = "none" , 200)
-})
+    setTimeout(() => preLoader.style.display = "none" , 200);
+
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Intro 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
-window.addEventListener("DOMContentLoaded", () => {
 
 let durationLoader = 3;
 let timingFunctionLoader = "cubic-bezier(.74, .06, .4, .92)";
@@ -88,6 +87,7 @@ setTimeout(() => {
 }, (durationLoader * 1000) * 1.8)
 
 })
+
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Smooth Scroll Function 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
 function smoothScroll(target , duration) {
