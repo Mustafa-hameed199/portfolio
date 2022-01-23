@@ -1,0 +1,114 @@
+/* ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾  Projects  ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾*/
+.projects {
+    padding: $sec_padding 0;
+    overflow: hidden;
+
+    .box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax( min(400px , 100%) , 1fr));
+        gap: 2rem;
+        perspective: 1000px;
+    }
+
+    .jquery { width : clamp(1.5rem , 1rem + 5vw , 3rem) }
+    .card {
+        position: relative;
+        text-transform: capitalize;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 10px;
+        background: rgba(black , .5);
+        backdrop-filter: blur(5px);
+        color: white;
+        box-shadow: 0 5px 15px rgba(black , .3);
+        
+        img { object-fit: cover }
+        &:hover  {
+            box-shadow: 0 5px 30px rgba(black , .5);
+            .content {
+                opacity: 1;
+                .title { transform: translateY(0) }
+                .icons > * { animation-play-state: running }
+                .card__btns a {
+                    transform: translate(0,0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .card.un-reveal:nth-child(odd) { transform: translateX(-50%) }
+    .card.un-reveal:nth-child(even) { transform: translateX(50%) }
+    
+        .content {
+            position: absolute;
+            inset: 0;
+            transition: .3s ease-out;
+            opacity: 0;
+            display: grid;
+            align-content: space-around;
+            padding-bottom: 1%;
+            overflow: hidden;
+            
+            background: rgba(black,.9);
+            .title {
+                font-size: clamp(1rem , 1rem + 2vw , 3rem);
+                font-weight: 500;
+                transition: .5s ease;
+                transform: translateY(-100%);
+            }
+            .icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                > * { animation: animate 1s ease infinite alternate paused }
+                > *:nth-child(2) { animation-delay: .3s }
+                > *:last-child { animation-delay: .6s }
+            }
+            i { 
+                font-size: clamp(1.5rem , 1rem + 5vw , 3rem);
+            }
+            .html { color: #e62f18 }
+            .css  { color: #2672ef }
+            .js   { color: #e6ff1a }
+            .sass { color: #f342f2 }
+            .vue  { color: #11a847 }
+    
+            .card__btns {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                a {
+                    width: fit-content;
+                    padding: 1.5% 5%;
+                    border: solid white 1px;
+                    border-radius: 100vw;
+                    font-size: clamp(.75rem , .75rem + 1vw , 1rem);
+                    position: relative;
+                    transition: .3s ease-out;
+                    opacity: 0;
+                    
+                    &:hover {
+                        background: $main_clr;
+                        border-color: $main_clr;
+                        box-shadow: 0 0 5px rgba($main_clr , .5),
+                                    0 0 7px rgba($main_clr , .5),
+                                    0 0 9px rgba($main_clr , .5),
+                                    0 0 11px rgba($main_clr , .5),
+                                    0 0 13px rgba($main_clr , .5),
+                                    0 0 15px rgba($main_clr , .5),
+                                    0 0 17px rgba($main_clr , .5),
+                                    0 0 19px rgba($main_clr , .5),
+                                    0 0 21px rgba($main_clr , .5);
+                    }
+                }
+                a:first-child { transform: translateX(-100%) }
+                a:last-child { transform: translateX(100%) }
+            }
+        }
+    }
+
+@keyframes animate {
+    0% { transform: translateY(0) }
+    100% { transform: translateY(-50%) }
+}

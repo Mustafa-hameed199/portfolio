@@ -1,0 +1,14 @@
+@import "./helpers/mixins";
+@import "./common/variables";
+@import "./common/reset";
+@import "./common/media";
+@import "./common/components";
+
+
+// pages
+@import "./pages/intro";
+@import "./pages/header";
+@import "./pages/home";
+@import "./pages/skills";
+@import "./pages/projects";
+@import "./pages/footer";

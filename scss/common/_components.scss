@@ -1,0 +1,23 @@
+.main-heading {
+    font-size: clamp(2.5rem , 1rem + 5vw , 3.5rem);
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: black;
+}
+
+// reveal elements 
+.un-reveal {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.spot {
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.spotted {
+    transform: translate(0 , 0) !important;
+    opacity: 1 ;
+}

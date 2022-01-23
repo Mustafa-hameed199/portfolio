@@ -1,0 +1,16 @@
+/* ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾  Footer  ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾*/
+.footer {
+    padding: ($sec_padding / 1.5) 0;
+    background: $dark2_clr;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+
+    i { margin-right: .5rem }
+
+    .email {
+        word-break: break-all;
+        margin-bottom: 1rem;
+    }
+
+}
