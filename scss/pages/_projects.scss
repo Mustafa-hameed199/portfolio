@@ -20,11 +20,10 @@
         background: rgba(black , .5);
         backdrop-filter: blur(5px);
         color: white;
-        box-shadow: 0 5px 15px rgba(black , .3);
+        box-shadow: 0 10px 15px rgba(black , .2);
         
         img { object-fit: cover }
         &:hover  {
-            box-shadow: 0 5px 30px rgba(black , .5);
             .content {
                 opacity: 1;
                 .title { transform: translateY(0) }
@@ -53,7 +52,7 @@
             .title {
                 font-size: clamp(1rem , 1rem + 2vw , 3rem);
                 font-weight: 500;
-                transition: .5s ease;
+                transition: .5s ease-out;
                 transform: translateY(-100%);
             }
             .icons {
@@ -102,8 +101,8 @@
                                     0 0 21px rgba($main_clr , .5);
                     }
                 }
-                a:first-child { transform: translateX(-100%) }
-                a:last-child { transform: translateX(100%) }
+                a:first-child { transform: translateX(-80vw) }
+                a:last-child { transform: translateX(80vw) }
             }
         }
     }

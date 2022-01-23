@@ -6,7 +6,7 @@
     display: grid;
     place-items: center;
     background: #161519;
-    transition: opacity .3s ease;
+    transition: opacity .15s ease;
 
     img {
         @include bp(small) { width: 60% }

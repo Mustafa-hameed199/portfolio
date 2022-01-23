@@ -5,13 +5,13 @@ const preLoader = document.querySelector(".preloader");
 
 window.addEventListener("load", () => {
     preLoader.style.opacity = "0";
-    setTimeout(() => preLoader.style.display = "none" , 350)
+    setTimeout(() => preLoader.style.display = "none" , 200)
 })
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Intro 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
 window.addEventListener("DOMContentLoaded", () => {
 
-let durationLoader = 3;
+let durationLoader = 0;
 let timingFunctionLoader = "cubic-bezier(.74, .06, .4, .92)";
 
 const html = document.querySelector('html');
@@ -85,6 +85,8 @@ setTimeout(() => {
     bodyPadding();
     syncLinks();
 }, (durationLoader * 1000) * 1.8)
+
+})
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Smooth Scroll Function 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
 function smoothScroll(target , duration) {
@@ -250,6 +252,4 @@ function showElements(entries) {
     })
 }
 elements.forEach(el => observer.observe(el) )
-
-})
 
