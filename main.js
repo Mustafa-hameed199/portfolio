@@ -11,80 +11,80 @@ window.addEventListener("load", () => {
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Intro 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
 
-let durationLoader = 3;
-let timingFunctionLoader = "cubic-bezier(.74, .06, .4, .92)";
+    let durationLoader = 0;
+    let timingFunctionLoader = "cubic-bezier(.74, .06, .4, .92)";
 
-const html = document.querySelector('html');
-html.style.setProperty('--loader-duration', durationLoader + 's');
-html.style.setProperty('--loader-time-func', timingFunctionLoader);
+    const html = document.querySelector('html');
+    html.style.setProperty('--loader-duration', durationLoader + 's');
+    html.style.setProperty('--loader-time-func', timingFunctionLoader);
 
-// ◻◻◻◻◻◻◻◻◻◻◻◻◻◻ random img ◻◻◻◻◻◻◻◻
+    // ◻◻◻◻◻◻◻◻◻◻◻◻◻◻ random img ◻◻◻◻◻◻◻◻
 
-if ([...document.querySelectorAll('.imgs img')]) {
-    const imgs = [...document.querySelectorAll('.imgs img')];
-    
-    let len = imgs.length;
-    let random = Math.floor(Math.random() * len);
-    
-    setInterval(() => {
-        imgs.forEach(img => img.classList.remove('active'));
-        imgs[random].classList.add('active');
-        if (random > -1 && random < len - 1) {
-            random++;
-        } else {
-            random = 0;
-        }
-    }, 150)
-}
-// ◻◻◻◻◻◻◻◻◻◻◻◻◻◻ loading text animate ◻◻◻◻◻◻◻◻
+    if ([...document.querySelectorAll('.imgs img')]) {
+        const imgs = [...document.querySelectorAll('.imgs img')];
 
-const loading = document.querySelector('.loading__text');
-let load_letters = loading.textContent.split('');
+        let len = imgs.length;
+        let random = Math.floor(Math.random() * len);
 
-loading.textContent = '';
+        setInterval(() => {
+            imgs.forEach(img => img.classList.remove('active'));
+            imgs[random].classList.add('active');
+            if (random > -1 && random < len - 1) {
+                random++;
+            } else {
+                random = 0;
+            }
+        }, 150)
+    }
+    // ◻◻◻◻◻◻◻◻◻◻◻◻◻◻ loading text animate ◻◻◻◻◻◻◻◻
 
-load_letters.forEach(l => {
-    let span = document.createElement('span');
-    span.append(l);
-    loading.append(span);
-})
+    const loading = document.querySelector('.loading__text');
+    let load_letters = loading.textContent.split('');
 
-let spans = [...loading.children];
-setTimeout(() => {
-    spans.forEach((s , i ) => {
-        setTimeout(() => {
-            s.classList.add('active')
-        }, (i + 1) * ((durationLoader / 2) * 50))
+    loading.textContent = '';
+
+    load_letters.forEach(l => {
+        let span = document.createElement('span');
+        span.append(l);
+        loading.append(span);
     })
 
-}, (durationLoader * 1000) / 9)
-setTimeout(() => {
-    spans.forEach((s , i ) => {
-        setTimeout(() => {
-            s.classList.remove('active')
-            s.classList.add('hide')
-            let randomX = Math.floor(Math.random() * -60) + 'px';
-            let randomY = Math.floor(Math.random() * -60) + 'px';
-            s.style.transform = `translate(${randomX},${randomY})`;
+    let spans = [...loading.children];
+    setTimeout(() => {
+        spans.forEach((s , i ) => {
+            setTimeout(() => {
+                s.classList.add('active')
+            }, (i + 1) * ((durationLoader / 2) * 50))
+        })
 
-        }, (i + 1) * (durationLoader * 15))
-    })
-}, durationLoader * 1300)
+    }, (durationLoader * 1000) / 9)
+    setTimeout(() => {
+        spans.forEach((s , i ) => {
+            setTimeout(() => {
+                s.classList.remove('active')
+                s.classList.add('hide')
+                let randomX = Math.floor(Math.random() * -60) + 'px';
+                let randomY = Math.floor(Math.random() * -60) + 'px';
+                s.style.transform = `translate(${randomX},${randomY})`;
 
-// ◻◻◻◻◻◻◻◻◻◻◻◻◻◻ delete intro & add content ◻◻◻◻◻◻◻◻
+            }, (i + 1) * (durationLoader * 15))
+        })
+    }, durationLoader * 1300)
 
-setTimeout(() => {
-    document.querySelector('.block-one').remove();
-    document.querySelector('.block-two').remove();
-    document.querySelector('.block-three').remove();
-    document.querySelector('.loading').remove();
-},(durationLoader * 1000) * 2)
+    // ◻◻◻◻◻◻◻◻◻◻◻◻◻◻ delete intro & add content ◻◻◻◻◻◻◻◻
 
-setTimeout(() => {
-    document.querySelector('.load-content').style.display = 'block';
-    bodyPadding();
-    syncLinks();
-}, (durationLoader * 1000) * 1.8)
+    setTimeout(() => {
+        document.querySelector('.block-one').remove();
+        document.querySelector('.block-two').remove();
+        document.querySelector('.block-three').remove();
+        document.querySelector('.loading').remove();
+    },(durationLoader * 1000) * 2)
+
+    setTimeout(() => {
+        document.querySelector('.load-content').style.display = 'block';
+        bodyPadding();
+        syncLinks();
+    }, (durationLoader * 1000) * 1.8)
 
 })
 
