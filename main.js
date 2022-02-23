@@ -8,7 +8,6 @@ window.addEventListener("load", () => {
 
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Intro 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
-
     let durationLoader = 3;
     let timingFunctionLoader = "cubic-bezier(.74, .06, .4, .92)";
 
@@ -245,7 +244,6 @@ let options = {
 let observer = new IntersectionObserver( showElements,options)
 
 function showElements(entries) {
-    log(entries)
     entries.forEach(el => {
         if (el.isIntersecting) el.target.classList.add("spotted")
     })
