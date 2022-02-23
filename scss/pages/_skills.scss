@@ -2,7 +2,7 @@
 .skills {
     $delay: .2s; // delay between skills when scroll
     $i: 2; // start point from element child 2
-    $elements: 7; // elements  number 
+    $elements: 8; // elements  number 
 
     padding: $sec_padding 0;
     position: relative;
@@ -38,6 +38,7 @@
         .html { color: #e62f18 }
         .css  { color: #2672ef }
         .js   { color: #e6ff1a }
+        .bootstrap   { color: #7952B3 }
         .sass { color: #f342f2 }
         .vue  { color: #11a847 }
         .git  { color: #f1592f }

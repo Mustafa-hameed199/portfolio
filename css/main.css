@@ -853,6 +853,9 @@ header {
 .skills .box .js {
   color: #e6ff1a;
 }
+.skills .box .bootstrap {
+  color: #7952B3;
+}
 .skills .box .sass {
   color: #f342f2;
 }
@@ -901,6 +904,10 @@ header {
   .skills .box .skill.un-reveal:nth-child(7) {
     -webkit-transition-delay: 1.2s;
             transition-delay: 1.2s;
+  }
+  .skills .box .skill.un-reveal:nth-child(8) {
+    -webkit-transition-delay: 1.4s;
+            transition-delay: 1.4s;
   }
 }
 
