@@ -150,9 +150,13 @@ h4 {
   -webkit-animation: show-ele 1s 1.2s ease forwards;
           animation: show-ele 1s 1.2s ease forwards;
 }
-.home .social a:last-child {
+.home .social a:nth-child(3) {
   -webkit-animation: show-ele 1s 1.4s ease forwards;
           animation: show-ele 1s 1.4s ease forwards;
+}
+.home .social a:last-child {
+  -webkit-animation: show-ele 1s 1.6s ease forwards;
+          animation: show-ele 1s 1.6s ease forwards;
 }
 
 @-webkit-keyframes show-ele2 {

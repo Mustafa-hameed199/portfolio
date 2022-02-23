@@ -28,7 +28,8 @@ $main_content_time_func: ease;
     }
     a:first-child { animation: show-ele 1s 1s $main_content_time_func forwards }
     a:nth-child(2) { animation: show-ele 1s 1.2s $main_content_time_func forwards }
-    a:last-child { animation: show-ele 1s 1.4s $main_content_time_func forwards }
+    a:nth-child(3) { animation: show-ele 1s 1.4s $main_content_time_func forwards }
+    a:last-child { animation: show-ele 1s 1.6s $main_content_time_func forwards }
 }
 
 @keyframes show-ele2 {
