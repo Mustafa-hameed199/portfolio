@@ -1006,13 +1006,17 @@ header {
   -webkit-animation: animate 1s ease infinite alternate paused;
           animation: animate 1s ease infinite alternate paused;
 }
-.projects .content .icons > *:nth-child(2) {
+.projects .content .icons > :nth-child(2) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-.projects .content .icons > *:last-child {
+.projects .content .icons > :nth-child(3) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
+}
+.projects .content .icons > :nth-child(4) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 .projects .content i {
   font-size: clamp(1.5rem , 1rem + 5vw , 3rem);
@@ -1025,6 +1029,9 @@ header {
 }
 .projects .content .js {
   color: #e6ff1a;
+}
+.projects .content .bootstrap {
+  color: #7952B3;
 }
 .projects .content .sass {
   color: #f342f2;

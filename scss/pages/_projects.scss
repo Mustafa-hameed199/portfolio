@@ -56,13 +56,19 @@
                 transform: translateY(-100%);
             }
             .icons {
+                $items: 4;
+                $delay: .3s;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 1rem;
                 > * { animation: animate 1s ease infinite alternate paused }
-                > *:nth-child(2) { animation-delay: .3s }
-                > *:last-child { animation-delay: .6s }
+                @for $i from 2 through $items {
+                    >:nth-child(#{$i}) {
+                        animation-delay: $delay;
+                        $delay: $delay + .3s;
+                    }
+                }
             }
             i { 
                 font-size: clamp(1.5rem , 1rem + 5vw , 3rem);
@@ -70,6 +76,7 @@
             .html { color: #e62f18 }
             .css  { color: #2672ef }
             .js   { color: #e6ff1a }
+            .bootstrap { color: #7952B3 }
             .sass { color: #f342f2 }
             .vue  { color: #11a847 }
     
