@@ -17,6 +17,9 @@ $main_content_time_func: ease;
 }
 
 .home .social {
+    $elements: 4;
+    $start: 1s;
+    $delay: 0s;
     &::before {
         transform: translate(-50%,100%);
         opacity: 0;
@@ -26,10 +29,10 @@ $main_content_time_func: ease;
         transform: translateX(30px);
         opacity: 0;
     }
-    a:first-child { animation: show-ele 1s 1s $main_content_time_func forwards }
-    a:nth-child(2) { animation: show-ele 1s 1.2s $main_content_time_func forwards }
-    a:nth-child(3) { animation: show-ele 1s 1.4s $main_content_time_func forwards }
-    a:last-child { animation: show-ele 1s 1.6s $main_content_time_func forwards }
+    @for $i from 1 through $elements {
+        a:nth-child(#{$i}){ animation: show-ele 1s ($start + $delay) $main_content_time_func forwards }
+        $delay: $delay + .2s;
+    }
 }
 
 @keyframes show-ele2 {

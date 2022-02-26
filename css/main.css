@@ -142,7 +142,7 @@ h4 {
           transform: translateX(30px);
   opacity: 0;
 }
-.home .social a:first-child {
+.home .social a:nth-child(1) {
   -webkit-animation: show-ele 1s 1s ease forwards;
           animation: show-ele 1s 1s ease forwards;
 }
@@ -154,7 +154,7 @@ h4 {
   -webkit-animation: show-ele 1s 1.4s ease forwards;
           animation: show-ele 1s 1.4s ease forwards;
 }
-.home .social a:last-child {
+.home .social a:nth-child(4) {
   -webkit-animation: show-ele 1s 1.6s ease forwards;
           animation: show-ele 1s 1.6s ease forwards;
 }
