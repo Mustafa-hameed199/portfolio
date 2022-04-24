@@ -865,6 +865,9 @@ header {
 .skills .box .git {
   color: #f1592f;
 }
+.skills .box .gulp {
+  color: #CF4647;
+}
 .skills .box .skill {
   display: -ms-grid;
   display: grid;
