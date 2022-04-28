@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
 
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Intro 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
-    let durationLoader = 0;
+    let durationLoader = 3;
     let timingFunctionLoader = "cubic-bezier(.74, .06, .4, .92)";
 
     const html = document.querySelector('html');
