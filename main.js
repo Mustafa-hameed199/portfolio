@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
 
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Intro 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
-    let durationLoader = 3;
+    let durationLoader = 0;
     let timingFunctionLoader = "cubic-bezier(.74, .06, .4, .92)";
 
     const html = document.querySelector('html');
@@ -103,12 +103,9 @@ function smoothScroll(target , duration) {
     requestAnimationFrame(animation);
 }
 
-    function ease(t,b,c,d) {
-        t /= d;
-        return -c * t*(t-2) + b;
-    
+    function ease(t, b, c, d) {
+	    return c * ( -Math.pow( 2, -10 * t/d ) + 1 ) + b;
     }
-
 
 // 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳  Header 🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳🔳
 // ◻◻◻◻◻◻◻◻◻◻◻◻◻◻ body padding ◻◻◻◻◻◻◻◻
@@ -165,12 +162,17 @@ window.addEventListener("resize",() => {
 // ◻◻◻◻◻◻◻◻◻◻◻◻◻◻ click links ◻◻◻◻◻◻◻◻
 
 const links = document.querySelectorAll(".nav__ul > * > *");
+const logo = document.querySelector("header .logo");
+
+logo.addEventListener("click", () => {
+    links[0].click()
+})
 
 function scrollToElement(ele) {
     let id = ele.dataset.scroll;
     let section = document.getElementById(id);
 
-    smoothScroll(section ,1500);
+    smoothScroll(section , 1500);
 }
 
 links.forEach(a => {
