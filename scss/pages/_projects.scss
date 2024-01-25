@@ -11,6 +11,8 @@
     }
 
     .jquery { width : clamp(1.5rem , 1rem + 5vw , 3rem) }
+    .mysql { width : clamp(3rem , 1rem + 5vw , 5rem) }
+
     .card {
         position: relative;
         text-transform: capitalize;
@@ -20,7 +22,7 @@
         background: rgba(black , .5);
         backdrop-filter: blur(5px);
         color: white;
-        box-shadow: 0 10px 15px rgba(black , .2);
+        box-shadow: 0 10px 15px rgba(#222 , .15);
         
         img { object-fit: cover }
         &:hover  {
@@ -56,7 +58,7 @@
                 transform: translateY(-100%);
             }
             .icons {
-                $items: 4;
+                $items: 5;
                 $delay: .3s;
                 display: flex;
                 align-items: center;
@@ -79,6 +81,8 @@
             .bootstrap { color: #7952B3 }
             .sass { color: #f342f2 }
             .vue  { color: #11a847 }
+            .php  { color: #5F85C4 }
+            .mysql  { color: #67C0FE }
     
             .card__btns {
                 display: flex;
@@ -112,7 +116,7 @@
                 a:last-child { transform: translateX(80vw) }
             }
         }
-    }
+}
 
 @keyframes animate {
     0% { transform: translateY(0) }
